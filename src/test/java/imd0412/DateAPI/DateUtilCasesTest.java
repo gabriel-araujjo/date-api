@@ -14,7 +14,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 @RunWith(Parameterized.class)
-public class DateUtilTest
+public class DateUtilCasesTest
 {
 
     @Parameters(name = "{0}/{1}/{2}")

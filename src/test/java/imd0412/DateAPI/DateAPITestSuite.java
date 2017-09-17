@@ -6,8 +6,9 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({
-        DateUtilTest.class,
-        DateUtilExceptionsTest.class
+        DateUtilCasesTest.class,
+        DateUtilExceptionsTest.class,
+        DateAPIInstanceTest.class
 })
 public class DateAPITestSuite {
 }
