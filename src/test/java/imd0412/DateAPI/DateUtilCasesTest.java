@@ -30,9 +30,11 @@ public class DateUtilCasesTest
                 {30, 4, 2016, "1/5/2016"},      // TC5 - day = 30 in month with 30 days
                 {28, 2, 1900, "1/3/1900"},      // TC6 - Feb 28 in a not leap year divisible by 100
                 {28, 2, 2000, "29/2/2000"},     // TC7 - Feb 28 in a leap year divisible by 400
-                {28, 2, 2004, "29/2/2004"},      // TC8 - Feb 28 in a leap year divisible by 4
+                {28, 2, 2004, "29/2/2004"},     // TC8 - Feb 28 in a leap year divisible by 4
                 {28, 2, 2003, "1/3/2003"},      // TC9 - Feb 28 in a common not leap year
-                {31, 12, 2003, "1/1/2004"},      // TC10 - Dec 31
+                {31, 12, 2003, "1/1/2004"},     // TC10 - Dec 31
+                {29, 2, 2004, "1/3/2004"},      // TC11 - Feb 29 in a leap year
+
         });
     }
 
