@@ -75,15 +75,14 @@ public class DateUtil
                                      // at this point
 			result = String.format(dateFormat, 1, month + 1, year);
 		}
-		else /*if (month == DECEMBER && day == 31)*/ // Always true
+		else if (month == DECEMBER && day == 31)
 		{
 			result = String.format(dateFormat, 1, 1, year + 1);
 		}
-		// Unreachable
-		/*else
+		else
 		{
 			throw new IllegalStateException();
-		}*/
+		}
 
 		return result;
 	}
