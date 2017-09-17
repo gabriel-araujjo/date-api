@@ -69,8 +69,10 @@ public class DateUtil
 		else if ((has31(month) && month != DECEMBER && day == 31)
 				|| (has30(month) && day == 30)
 				|| (isFebruary(month) && isLeapYear(year) && day == 29)
-				|| (isFebruary(month) && !isLeapYear(year) && day == 28))
-		{
+				|| (isFebruary(month) /*&& !isLeapYear(year)*/ && day == 28))
+        {                            //         ↑
+                                     // year will always be a not leap year
+                                     // at this point
 			result = String.format(dateFormat, 1, month + 1, year);
 		}
 		else /*if (month == DECEMBER && day == 31)*/ // Always true
