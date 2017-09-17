@@ -66,7 +66,7 @@ public class DateUtil
 		{
 			result = String.format(dateFormat, day + 1, month, year);
 		}
-		else if ((has31(month) && month != DECEMBER && day == 31)
+		else if ((has31(month) && month != DECEMBER /*&& day == 31*/) // day will always be 31 here
 				|| (has30(month) && day == 30)
 				|| (isFebruary(month) && isLeapYear(year) && day == 29)
 				|| (isFebruary(month) /*&& !isLeapYear(year)*/ && day == 28))
