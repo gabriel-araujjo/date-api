@@ -22,14 +22,15 @@ public class DateUtilExceptionsTest {
     @Parameters(name = "{0}/{1}/{2}")
     public static Collection<Object[]> parameters() {
         return Arrays.asList(new Object[][]{
-                {31, 12, 1811, IllegalArgumentException.class},       // TE0 - Year limits
-                {1, 1, 2017, IllegalArgumentException.class},         //     - Year limits
-                {32, 12, 1812, IllegalArgumentException.class},       // TE1 - Invalid day
-                {0, 1, 2016, IllegalArgumentException.class},         //     - Invalid day
-                {31, 13, 1812, IllegalArgumentException.class},       // TE2 - Invalid month
-                {1, 0, 2016, IllegalArgumentException.class},         //     - Invalid month
-                {31, 4, 2016, IllegalStateException.class},           // TE3 - Invalid date
-                {30, 2, 2016, IllegalStateException.class},           //     - Invalid date
+                {31, 12, 1811, IllegalArgumentException.class},       // TC10 - Year limits
+                {1, 1, 2017, IllegalArgumentException.class},         // TC11 - Year limits
+                {1, 0, 2016, IllegalArgumentException.class},         // TC12 - Invalid month
+                {31, 13, 1812, IllegalArgumentException.class},       // TC13 - Invalid month
+                {0, 1, 2016, IllegalArgumentException.class},         // TC14 - Invalid day
+                {32, 12, 1812, IllegalArgumentException.class},       // TC15 - Invalid day
+                {31, 4, 2016, IllegalStateException.class},           // TC16 - Invalid date
+                {30, 2, 2016, IllegalStateException.class},           // TC17 - Invalid date
+                {29, 2, 2015, IllegalStateException.class},           // TC18 - Invalid date
         });
     }
 
