@@ -31,7 +31,6 @@ public class DateUtilCasesTest
                 {31, 12, 2003, "1/1/2004"},     // TC9 - Dec 31
 
 
-                {28, 2, 2004, "29/2/2004"},     // TC6.1 - Feb 28 in a leap year (divisible by 4)
                 {28, 2, 1900, "1/3/1900"},      // TC8.1 - Feb 28 in a not leap year (divisible by 100)
         });
     }

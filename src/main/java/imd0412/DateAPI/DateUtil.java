@@ -71,8 +71,7 @@ public class DateUtil
 				|| (isFebruary(month) && isLeapYear(year) && day == 29)
 				|| (isFebruary(month) /*&& !isLeapYear(year)*/ && day == 28))
         {                            //         ↑
-                                     // year will always be a not leap year
-                                     // at this point
+                                     // it does not matter at this point
 			result = String.format(dateFormat, 1, month + 1, year);
 		}
 		else if (month == DECEMBER /*&& day == 31*/) // day will always be 31 here
